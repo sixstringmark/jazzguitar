@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Six String Mark's Jazz Guitar Showcase</title>
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+
+		<link rel="stylesheet" type="text/css" href="css/html5audio_playlist_selector.css" />
+
+        <script type="text/javascript" src="js/swfobject.js"></script><!-- flash backup -->
+        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script><!-- jquery ui sortable/draggable -->
+        <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script><!-- mobile drag/sort -->
+        <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script><!-- scroll in playlist -->
+        <script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script><!-- scroll in playlist -->
+        <script type="text/javascript" src="js/jquery.selectbox-0.2.js"></script><!-- playlist selector dropdown -->
+        <script type="text/javascript" src="js/id3-minimized.js"></script><!-- id3 tags -->
+        <script type="text/javascript" src="js/jquery.html5audio.min.js"></script>
+        <script type="text/javascript" src="js/jquery.html5audio.func.js"></script>
+        <script type="text/javascript" src="js/vortext_playlist_selector.js"></script>
+
+
+	<link rel="stylesheet" href="css/vv.css">
+
+	<script type="text/javascript">
+		function showMe(ii) {
+			var tg = $(ii);
+			tg.toggle(150);
+			pp = tg.find(".xplaylist");
+			//alert(pp);
+			$(pp[0]).scrollTop(0);
+		}
+		function hideMe(ii) {
+			var tg = $(ii);
+			tg.toggle(150);
+		}
+		function loadMe() {
+
+		}
+
+	</script>
+</head>
+
+<body onload="loadMe()">
+	<div id="container">
+		<div class="ps_banner">
+			<div class="ps_logo">
+			<div class="ps_logo_text">Jazz Guitar Showcase</div>
+				<img src="hdr_home.png"/>
+			</div>
+			<div class="ps_links">
+				<a class="link45" href="index.html">Home</a>
+				<a class="link45" href="links.html">Links</a>
+				<a class="link45" href="about.html">About</a>
+			</div>
+		</div>
+		
+		
+		<div class="ps_headers">
+			<div class="ps_header1">
+				This is the home of mcmarkio.com's Jazz Guitar Showcase. Here you can
+				stream shows presenting a variety of the best in jazz
+				music featuring the guitar.
+				Streaming is absolutely free with no registration required.
+				Shows are divided into parts roughly one hour long.  To stream a show part,
+				press the button for the show 
+				then press the "Play" button in the part
+				heading in the contents. 
+			</div>
+			<div class="ps_header2">
+				More to come
+			</div>
+		</div>
+		
+		
+		<div class="wrapper">
+			<div class="content">
+			</div><!-- content -->
+
+       <div id="componentWrapper">
+
+       		 <div class="playerHolder">
+
+            	  <!-- song name -->
+                  <div class="player_mediaName_Mask">
+                 	  <div class="player_mediaName"></div>
+                  </div>
+
+                  <!-- song time -->
+                  <div class="player_mediaTime">
+                  	  <div class="player_mediaTime_current">0:00</div><div class="player_mediaTime_total">0:00</div>
+                  </div>
+
+                  <div class="player_controls">
+                  	  <!-- previous -->
+                      <div class="controls_prev"><img src='media/data/icons/set1/prev.png' alt='controls_prev'/></div>
+                      <!-- pause/play -->
+                      <div class="controls_toggle"><img src='media/data/icons/set1/play.png' alt='controls_toggle'/></div>
+                      <!-- next -->
+                      <div class="controls_next"><img src='media/data/icons/set1/next.png' alt='controls_next'/></div>
+
+                 	  <!-- volume -->
+                      <div class="player_volume"><img src='media/data/icons/set1/volume.png' alt='player_volume'/></div>
+                      <div class="volume_seekbar">
+                         <div class="volume_bg"></div>
+                         <div class="volume_level"></div>
+                         <!-- volume tooltip -->
+                  		 <div class="player_volume_tooltip"><p></p></div>
+                      </div>
+
+                      <!-- loop -->
+                      <div class="player_loop"><img src='media/data/icons/set1/loop.png' alt='player_loop'/></div>
+                      <!-- shuffle -->
+                      <div class="player_shuffle"><img src='media/data/icons/set1/shuffle.png' alt='player_shuffle'/></div>
+                      <!-- download -->
+                      <div class="player_download"><img src='media/data/icons/set1/download.png' alt="player_download"/></div>
+                  </div>
+
+                  <!-- progress -->
+                  <div class="player_progress">
+                      <div class="progress_bg"></div>
+                      <div class="load_progress"></div>
+                      <div class="play_progress"></div>
+                      <!-- progress tooltip -->
+                  	  <div class="player_progress_tooltip"><p></p></div>
+                  </div>
+
+             </div>
+
+             <div class="playlistHolder">
+                 <div class="componentPlaylist">
+                     <div class="playlist_inner">
+                     	<!-- playlist items are appended here! -->
+                     </div>
+                 </div>
+                 <!-- preloader -->
+                 <div class="preloader"></div>
+             </div>
+
+        </div>
+
+			<div class="details">
+				<ul>
+				<li>
+					<div>Available Shows</div>
+					<div class="show_list">
+						<button onclick='showMe("#C01-1");'>Show #1</button>
+						<button onclick='showMe("#C02-1");'>Show #2</button>
+						<button onclick='showMe("#C03-1");'>Show #3</button>
+					</div>
+					<ul>
+						<li class="play">
+
+						</li>
+					</ul>
+<div class="playlist_contents" id="C01-1" style="display:none;">
+
+<div class="contents_closer"> <span>Show #1 Contents</span> <a href="#" onclick='hideMe("#C01-1")'>Close</a></div>
+
+<div class="xplaylist">
+
+<div class="entry part"><div class="part_name">Part 1 <a href="#" onclick="mc_monitor(0); return false;"><img src="play_small.png"/></a></div></div>
+<div class="entry"><div class="artist">Howard Roberts</div><div class="album">The Real Howard Roberts</div><div class="year">1978</div><div class="title">Dolphin Dance</div><div class="time">5:25	</div></div>
+<div class="entry"><div class="artist">Mark Elf</div><div class="album">Mark Elf Trío</div><div class="year">1994</div><div class="title">Giant Steps</div><div class="time">3:38	</div></div>
+<div class="entry"><div class="artist">Django Reinhardt</div><div class="album">Djangology [Bonus Tracks]</div><div class="year">2002</div><div class="title">Honeysuckle Rose</div><div class="time">4:00	</div></div>
+<div class="entry"><div class="artist">Billy Cobham (Tommy Bolin - guitar)</div><div class="album">Spectrum (Remaster)</div><div class="year">1973</div><div class="title">Quadrant 4</div><div class="time">4:21	</div></div>
+<div class="entry"><div class="artist">George Benson</div><div class="album">Beyond The Blue Horizon (Remaster 1)</div><div class="year">1971</div><div class="title">So What?</div><div class="time">8:52	</div></div>
+<div class="entry"><div class="artist">George Benson</div><div class="album">Beyond The Blue Horizon (Remaster 1)</div><div class="year">1971</div><div class="title">The Gentle Rain</div><div class="time">9:08	</div></div>
+<div class="entry"><div class="artist">Martin Taylor</div><div class="album">Portraits</div><div class="year">1996</div><div class="title">Shiny Stockings (Solo)</div><div class="time">3:56	</div></div>
+<div class="entry"><div class="artist">Gabor Szabo</div><div class="album">The Sorcerer</div><div class="year"></div><div class="title">The Beat Goes On</div><div class="time">4:41	</div></div>
+<div class="entry"><div class="artist">Phil Upchurch</div><div class="album">Tell The Truth!</div><div class="year">2001</div><div class="title">Girl Talk</div><div class="time">6:02	</div></div>
+<div class="entry"><div class="artist">Michael Fiorino & Ensemble 456 (David Berger - guitar)</div><div class="album">Ensemble 456</div><div class="year">2014</div><div class="title">Blues For Lampedusa</div><div class="time">6:12	</div></div>
+<div class="entry"><div class="artist">Luiz Bonfa</div><div class="album">The New Face of Bonfá</div><div class="year">1970</div><div class="title">Salvador</div><div class="time">3:06	</div></div>
+<div class="entry"><div class="artist">Buddy Miles (Marlo Henderson - guitar)</div><div class="album">Them Changes</div><div class="year"></div><div class="title">Paul B Allen, Omaha, Nebraska</div><div class="time">5:32	</div></div>
+<div class="entry"><div class="artist">Deodato (John Tropea - guitar)</div><div class="album">Billboard Top 100 Hits 1973</div><div class="year">1973</div><div class="title">Also Sprach Zarathustra</div><div class="time">5:03	</div></div>
+<div class="entry"><div class="artist">Paul Desmond</div><div class="album">Pure Desmond</div><div class="year">1975</div><div class="title">Squeeze Me</div><div class="time">4:35	</div></div>
+
+<div class="entry part"><div class="part_name">Part 2 <a href="#" onclick="mc_monitor(1); return false;"><img src="play_small.png"/></a></div></div>
+<div class="entry"><div class="artist">Wes Montgomery</div><div class="album">Incredible Jazz Guitar</div><div class="year"></div><div class="title">Mr Walker (Renie)</div><div class="time">4:34	</div></div>
+<div class="entry"><div class="artist">Kenny Burrell</div><div class="album">Jazzmen Detroit / Kenny Burrell</div><div class="year">1956</div><div class="title">Cottontail</div><div class="time">5:35	</div></div>
+<div class="entry"><div class="artist">Oscar Castro-Neves</div><div class="album">Playful Heart</div><div class="year">2003</div><div class="title">Four Brothers</div><div class="time">4:24	</div></div>
+<div class="entry"><div class="artist">Lenny Breau</div><div class="album">Guitar Sounds</div><div class="year">1968</div><div class="title">Music to Watch Girls By</div><div class="time">4:29	</div></div>
+<div class="entry"><div class="artist">Pat Martino</div><div class="album">El Hombre</div><div class="year">1967</div><div class="title">Once I Loved</div><div class="time">5:42	</div></div>
+<div class="entry"><div class="artist">Dave Cliff</div><div class="album">Sipping At Bells</div><div class="year">2007</div><div class="title">Once I Loved</div><div class="time">5:55	</div></div>
+<div class="entry"><div class="artist">Steve Khan</div><div class="album">Public Access</div><div class="year"></div><div class="title">Sisé</div><div class="time">9:18	</div></div>
+<div class="entry"><div class="artist">Charlie Christian</div><div class="album">The Genius Of The Electric Guitar</div><div class="year"></div><div class="title">Solo Flight</div><div class="time">2:48	</div></div>
+<div class="entry"><div class="artist">Grant Green</div><div class="album">The Complete Quartets</div><div class="year">1997</div><div class="title">Nancy (With The Laughing Face)</div><div class="time">6:25	</div></div>
+<div class="entry"><div class="artist">Ten Years After</div><div class="album">Cricklewood Green</div><div class="year">1970</div><div class="title">Me And My Baby</div><div class="time">4:18	</div></div>
+<div class="entry"><div class="artist">Mahavishnu Orchestra (John McLaughlin - guitar)</div><div class="album">Inner Mounting Flame</div><div class="year"></div><div class="title">Awakening</div><div class="time">3:27	</div></div>
+<div class="entry"><div class="artist">Earl Klugh</div><div class="album">Solo Guitar</div><div class="year">1989</div><div class="title">You Make Me Feel So Young</div><div class="time">3:05	</div></div>
+<div class="entry"><div class="artist">Eddie Lang</div><div class="album">Jazz Guitar Virtuoso</div><div class="year"></div><div class="title">Melody Man's Dream</div><div class="time">2:49	</div></div>
+<div class="entry"><div class="artist">Harvey Mandel</div><div class="album">The Snake</div><div class="year"></div><div class="title">Levitation</div><div class="time">5:12	</div></div>
+<div class="entry"><div class="artist">Oscar Peterson (Joe Pass - guitar)</div><div class="album">The Trio</div><div class="year">1973</div><div class="title">Secret Love</div><div class="time">7:16	</div></div>
+
+<div class="entry part"><div class="part_name">Part 3 <a href="#" onclick="mc_monitor(2); return false;"><img src="play_small.png"/></a></div></div>
+<div class="entry"><div class="artist">Bobby Broom</div><div class="album">Upper West Side Story</div><div class="year">2012</div><div class="title">Call Me a Cab</div><div class="time">6:13	</div></div>
+<div class="entry"><div class="artist">Lee Ritenour</div><div class="album">Smoke 'n' Mirrors</div><div class="year">2006</div><div class="title">Povo</div><div class="time">6:43	</div></div>
+<div class="entry"><div class="artist">Tuck Andress</div><div class="album">Reckless Precision</div><div class="year">1990</div><div class="title">Louie Louie</div><div class="time">3:43	</div></div>
+<div class="entry"><div class="artist">Jimi Hendrix</div><div class="album">Electric Ladyland</div><div class="year">1968</div><div class="title">Rainy Day, Dream Away</div><div class="time">3:42	</div></div>
+<div class="entry"><div class="artist">Chico Hamilton (Jim Hall - guitar)</div><div class="album">The Original Chico Hamilton Quintet</div><div class="year">1960</div><div class="title">Change It</div><div class="time">2:42	</div></div>
+<div class="entry"><div class="artist">Chico Hamilton (Jim Hall - guitar)</div><div class="album">The Original Chico Hamilton Quintet</div><div class="year">1960</div><div class="title">Cute Little Deal</div><div class="time">3:02	</div></div>
+<div class="entry"><div class="artist">Chico Hamilton (Jim Hall - guitar)</div><div class="album">The Original Chico Hamilton Quintet</div><div class="year">1960</div><div class="title">A Mood</div><div class="time">3:59	</div></div>
+<div class="entry"><div class="artist">Chico Hamilton (Jim Hall - guitar)</div><div class="album">The Original Chico Hamilton Quintet</div><div class="year">1960</div><div class="title">This is Your Day</div><div class="time">3:59	</div></div>
+<div class="entry"><div class="artist">Chico Hamilton (Jim Hall - guitar)</div><div class="album">The Original Chico Hamilton Quintet</div><div class="year">1960</div><div class="title">I'll Keep Loving You</div><div class="time">2:21	</div></div>
+<div class="entry"><div class="artist">Chico Hamilton (Jim Hall - guitar)</div><div class="album">The Original Chico Hamilton Quintet</div><div class="year">1960</div><div class="title">Crazy Rhythm</div><div class="time">4:18	</div></div>
+<div class="entry"><div class="artist">Judy Roberts (Neal Seroka - guitar)</div><div class="album">Judy Roberts Band</div><div class="year">1979</div><div class="title">Dandelion</div><div class="time">4:06	</div></div>
+<div class="entry"><div class="artist">Philip Catherine Trio</div><div class="album">I Remember You</div><div class="year">2009</div><div class="title">I Remember You</div><div class="time">6:00	</div></div>
+<div class="entry"><div class="artist">Baden Powell</div><div class="album">Solitude on guitar</div><div class="year">1973</div><div class="title">Chará</div><div class="time">2:15	</div></div>
+<div class="entry"><div class="artist">Diana Krall (Russell Malone - guitar)</div><div class="album">Impulse Sampler</div><div class="year"></div><div class="title">Hit That Jive Jack</div><div class="time">4:17	</div></div>
+<div class="entry"><div class="artist">Larry Coryell</div><div class="album">Offering</div><div class="year"></div><div class="title">Ruminations</div><div class="time">4:22	</div></div>
+<div class="entry"><div class="artist">Charlie Byrd</div><div class="album">The World of Charlie Byrd</div><div class="year">1973</div><div class="title">Let It Be</div><div class="time">3:38	</div></div>
+<div class="entry"><div class="artist">The George Barnes Octet</div><div class="album">The George Barnes Octet:The Complete Standard Transcriptions</div><div class="year">2006</div><div class="title">London Bridgework</div><div class="time">2:59	</div></div>
+<div class="entry"><div class="artist">Johnny Smith Quintet</div><div class="album">Johnny Smith Quintet Featuring Stan Getz</div><div class="year"></div><div class="title">Moonlight In Vermont</div><div class="time">3:17	</div></div>
+<div class="entry"><div class="artist">Red Norvo Trio with Tal Farlow and Charles Mingus</div><div class="album">The Red Norvo Trio With Tal Farlow And Charles Mingus: The Savoy Sessions</div><div class="year"></div><div class="title">Zing! Went The Strings Of My Heart</div><div class="time">3:28	</div></div>
+
+
+
+</div>
+</div>
+
+<div class="playlist_contents" id="C02-1" style="display:none;">
+
+<div class="contents_closer"> <span>Show #2 Contents</span> <a href="#" onclick='hideMe("#C02-1")'>Close</a></div>
+
+<div class="xplaylist">
+
+<div class="entry part"><div class="part_name">Part 1 <a href="#" onclick="mc_monitor(3); return false;"><img src="play_small.png"/></a></div></div>
+<div class="entry"><div class="artist">Tal Farlow</div><div class="album">The Swinging Guitar Of Tal Farlow [Bonus Tracks]</div><div class="year">1957</div><div class="title">Taking A Chance On Love</div><div class="time">4:47	</div></div>
+<div class="entry"><div class="artist">Doug Raney</div><div class="album">Cuttin' Loose</div><div class="year">1979</div><div class="title">Four</div><div class="time">5:44	</div></div>
+<div class="entry"><div class="artist">Gabor Szabo</div><div class="album">Bacchanal</div><div class="year">1968</div><div class="title">Love Is Blue</div><div class="time">4:20	</div></div>
+<div class="entry"><div class="artist">Al Casey</div><div class="album">Six Swinging Strings</div><div class="year">2012</div><div class="title">Ain't Misbehaving</div><div class="time">5:26	</div></div>
+<div class="entry"><div class="artist">Wes Montgomery</div><div class="album">Bumpin'</div><div class="year">1965</div><div class="title">Bumpin'</div><div class="time">6:45	</div></div>
+<div class="entry"><div class="artist">Wes Montgomery</div><div class="album">Bumpin'</div><div class="year">1965</div><div class="title">Tear It Down</div><div class="time">3:10	</div></div>
+<div class="entry"><div class="artist">Wes Montgomery</div><div class="album">Bumpin'</div><div class="year">1965</div><div class="title">A Quiet Morning</div><div class="time">3:35	</div></div>
+<div class="entry"><div class="artist">Wes Montgomery</div><div class="album">Bumpin'</div><div class="year">1965</div><div class="title">Con Alma</div><div class="time">3:24	</div></div>
+<div class="entry"><div class="artist">Jim Hall</div><div class="album">Where Would I Be?</div><div class="year">1971</div><div class="title">Baubles, Bangles And Beads</div><div class="time">3:27	</div></div>
+<div class="entry"><div class="artist">Django Reinhardt</div><div class="album">Djangology [Bonus Tracks]</div><div class="year">2002</div><div class="title">Brick Top</div><div class="time">3:45	</div></div>
+<div class="entry"><div class="artist">Jeri Southern/Johnny Smith</div><div class="album">Jeri Southern Meets Johnny Smith</div><div class="year">1959</div><div class="title">Until The Real Thing Comes Along</div><div class="time">4:32	</div></div>
+<div class="entry"><div class="artist">Luiz Bonfá</div><div class="album">The New Face of Bonfá</div><div class="year">1970</div><div class="title">Macumba</div><div class="time">2:49	</div></div>
+<div class="entry"><div class="artist">Stanley Jordan</div><div class="album">Standards Volume 1</div><div class="year">1986</div><div class="title">My Favorite Things</div><div class="time">3:53	</div></div>
+<div class="entry"><div class="artist">Joshua Breakstone</div><div class="album">2nd Avenue</div><div class="year">2015</div><div class="title">Hit It</div><div class="time">9:25	</div></div>
+<div class="entry"><div class="artist">Larry Carlton</div><div class="album">Fire Wire</div><div class="year">2005</div><div class="title">Inkblot 11</div><div class="time">3:19	</div></div>
+<div class="entry"><div class="artist">The Howard Alden All Star Quintet</div><div class="album">Swinging into Prominence</div><div class="year">1988</div><div class="title">Intimacy of the Blues</div><div class="time">5:13	</div></div>
+<div class="entry"><div class="artist">Tony Purrone</div><div class="album">Six-String Delight</div><div class="year">1998</div><div class="title">Gibson Boy</div><div class="time">6:30	</div></div>
+
+<div class="entry part"><div class="part_name">Part 2 <a href="#" onclick="mc_monitor(4); return false;"><img src="play_small.png"/></a></div></div>
+<div class="entry"><div class="artist">Grant Green</div><div class="album">The Complete Quartets</div><div class="year">1997</div><div class="title">On Green Dolphin Street</div><div class="time">6:27	</div></div>
+<div class="entry"><div class="artist">Howard Roberts</div><div class="album">H.R. is a Dirty Guitar Player</div><div class="year">1963</div><div class="title">Watermelon Man</div><div class="time">2:31	</div></div>
+<div class="entry"><div class="artist">The L.A. Four (Laurindo Almeida - guitar)</div><div class="album">Executive Suite</div><div class="year">1982</div><div class="title">Voce E Eu</div><div class="time">4:26	</div></div>
+<div class="entry"><div class="artist">Ella Fitzgerald & Joe Pass</div><div class="album">Easy Living</div><div class="year">1986</div><div class="title">I Don't Stand A Ghost Of A Chance With You</div><div class="time">6:06	</div></div>
+<div class="entry"><div class="artist">Marc Fosset</div><div class="album">Marc Fosset Au Jazzland</div><div class="year">2011</div><div class="title">Joy Spring</div><div class="time">7:44	</div></div>
+<div class="entry"><div class="artist">Charlie Byrd Trio</div><div class="album">Isn't It Romantic?</div><div class="year">1984</div><div class="title">Cheek To Cheek</div><div class="time">4:33	</div></div>
+<div class="entry"><div class="artist">The Red Norvo Trio with Tal Farlow and Charles Mingus</div><div class="album">The Red Norvo Trio With Tal Farlow And Charles Mingus: The Savoy Sessions</div><div class="year">1976</div><div class="title">Cheek To Cheek</div><div class="time">2:42	</div></div>
+<div class="entry"><div class="artist">Tom Scott and the LA Express (Larry Carlton - guitar)</div><div class="album">Tom Scott and the LA Express</div><div class="year">1974</div><div class="title">King Cobra</div><div class="time">4:26	</div></div>
+<div class="entry"><div class="artist">Eddie Lang</div><div class="album">Jazz Guitar Virtuoso</div><div class="year">1990</div><div class="title">Feeling My Way</div><div class="time">2:59	</div></div>
+<div class="entry"><div class="artist">Jimmy Smith (Kenny Burrell - guitar)</div><div class="album">Organ Grinder Swing</div><div class="year">1965</div><div class="title">Blues for J</div><div class="time">5:20	</div></div>
+<div class="entry"><div class="artist">Lenny Breau</div><div class="album">Guitar Sounds</div><div class="year">1968</div><div class="title">Hard Day's Night</div><div class="time">4:12	</div></div>
+<div class="entry"><div class="artist">The Eleventh House with Larry Coryell</div><div class="album">Level One</div><div class="year">1975</div><div class="title">Some Greasy Stuff</div><div class="time">3:34	</div></div>
+<div class="entry"><div class="artist">Pat Metheny, Dave Holland & Roy Haynes</div><div class="album">Question And Answer</div><div class="year">1989</div><div class="title">Old Folks</div><div class="time">6:40	</div></div>
+<div class="entry"><div class="artist">Frank Portolese</div><div class="album">Plectrum Jazz Guitar Solos</div><div class="year">2010</div><div class="title">Black And Tan Fantasy</div><div class="time">3:14	</div></div>
+<div class="entry"><div class="artist">Ed Bickert</div><div class="album">At Last</div><div class="year">1976</div><div class="title">Nancy With The Laughing Race</div><div class="time">4:44	</div></div>
+<div class="entry"><div class="artist">Blodwyn Pig (Mick Abrahams - guitar)</div><div class="album">Ahead Rings Out</div><div class="year">1969</div><div class="title">Leave It With Me</div><div class="time">3:50	</div></div>
+<div class="entry"><div class="artist">Pat Martino</div><div class="album">Impressions</div><div class="year">1970</div><div class="title">Impressions</div><div class="time">4:37	</div></div>
+
+
+<div class="entry part"><div class="part_name">Part 3 <a href="#" onclick="mc_monitor(5); return false;"><img src="play_small.png"/></a></div></div>
+<div class="entry"><div class="artist">Kenny Burrell</div><div class="album">60 Years of Blue Note Sampler</div><div class="year">1963</div><div class="title">Midnight Blue</div><div class="time">4:01	</div></div>
+<div class="entry"><div class="artist">Hank Garland</div><div class="album">Move! The Guitar Artistry Of Hank Garland</div><div class="year">2009</div><div class="title">Move</div><div class="time">4:25	</div></div>
+<div class="entry"><div class="artist">Al Viola</div><div class="album">Solo Guitar</div><div class="year">1957</div><div class="title">I Get A Kick Out of You</div><div class="time">2:26	</div></div>
+<div class="entry"><div class="artist">Phil Upchurch</div><div class="album">Darkness, Darkness</div><div class="year">1972</div><div class="title">Love and Peace</div><div class="time">5:28	</div></div>
+<div class="entry"><div class="artist">Phil Upchurch</div><div class="album">Darkness, Darkness</div><div class="year">1972</div><div class="title">Sweet Chariot</div><div class="time">6:39	</div></div>
+<div class="entry"><div class="artist">Phil Upchurch</div><div class="album">Darkness, Darkness</div><div class="year">1972</div><div class="title">Sausalito Blues</div><div class="time">4:06	</div></div>
+<div class="entry"><div class="artist">Russell Malone</div><div class="album">Playground</div><div class="year">2004</div><div class="title">We've Only Just Begun</div><div class="time">5:00	</div></div>
+<div class="entry"><div class="artist">Ray Crawford</div><div class="album">Smooth Groove</div><div class="year">1988</div><div class="title">Miss April</div><div class="time">7:40	</div></div>
+<div class="entry"><div class="artist">George Van Eps</div><div class="album">Mellow Guitar</div><div class="year">1956</div><div class="title">I'll Remember April</div><div class="time">4:11	</div></div>
+<div class="entry"><div class="artist">Freddie Green</div><div class="album">Jazz Through the Years</div><div class="year">2014</div><div class="title">Them There Eyes</div><div class="time">3:00	</div></div>
+<div class="entry"><div class="artist">Mahavishnu Orchestra (John McLaughlin - guitar)</div><div class="album">Inner Mounting Flame</div><div class="year">1971</div><div class="title">The Noonward Race</div><div class="time">6:30	</div></div>
+<div class="entry"><div class="artist">Chris Flory</div><div class="album">Word On The Street</div><div class="year">1996</div><div class="title">Touch Of Your Lips</div><div class="time">7:35	</div></div>
+<div class="entry"><div class="artist">Harvey Mandel</div><div class="album">Cristo Redentor</div><div class="year">1968</div><div class="title">Wade In The Water</div><div class="time">7:50	</div></div>
+<div class="entry"><div class="artist">Oscar Moore Trio</div><div class="album">Afterglow - Tribute To Nat King Cole</div><div class="year">1966</div><div class="title">That's All</div><div class="time">3:07	</div></div>
+<div class="entry"><div class="artist">Baden Powell</div><div class="album">Solitude on guitar</div><div class="year">1973</div><div class="title">Marciá, eu te amo</div><div class="time">5:11	</div></div>
+<div class="entry"><div class="artist">Gary Potter</div><div class="album">Mathew Street</div><div class="year">2000</div><div class="title">Take The 'A' Train</div><div class="time">3:40	</div></div>
+
+
+
+</div>
+</div>
+
+<div class="playlist_contents" id="C03-1" style="display:none;">
+
+<div class="contents_closer"> <span>Show #3 Contents</span> <a href="#" onclick='hideMe("#C03-1")'>Close</a></div>
+
+<div class="xplaylist">
+
+<div class="entry part"><div class="part_name">Part 1 <a href="#" onclick="mc_monitor(6); return false;"><img src="play_small.png"/></a></div></div>
+<div class="entry xx ss"><div class="artist">Six String Mark</div><div class="album">Set 1</div><div class="year">2021</div><div class="title">Set</div><div class="time">0:27</div></div>
+<div class="entry"><div class="artist">Grant Geissman</div><div class="album">Say That!</div><div class="year">2006</div><div class="title">Below The Radar</div><div class="time">3:31</div></div>
+<div class="entry"><div class="artist">Pat Martino</div><div class="album">El Hombre</div><div class="year">1967</div><div class="title">A Blues for Mickey-O</div><div class="time">8:01</div></div>
+<div class="entry"><div class="artist">Charlie Byrd Trio</div><div class="album">Brazilville</div><div class="year">1982</div><div class="title">Brazilville</div><div class="time">5:12</div></div>
+
+<div class="entry xx ss"><div class="artist">Six String Mark</div><div class="album">Jazz Guitar Showcase Show 03</div><div class="year">2021</div><div class="title">My Goal's Beyond Side 1</div><div class="time">1:18</div></div>
+<div class="entry"><div class="artist">John McLaughlin</div><div class="album">My Goals Beyond</div><div class="year">1971</div><div class="title">Peace One</div><div class="time">7:07</div></div>
+<div class="entry"><div class="artist">John McLaughlin</div><div class="album">My Goals Beyond</div><div class="year">1971</div><div class="title">Peace Two</div><div class="time">12:12</div></div>
+<div class="entry xx"><div class="artist">WKLO 1961 Aircheck with Bob Lyons</div><div class="album">WKLO 1961 Aircheck</div><div class="year">1961</div><div class="title">1961 (WKLO) vine records ad</div><div class="time">0:18</div></div>
+
+<div class="entry xx ss"><div class="artist">Six String Mark</div><div class="album">Set 1</div><div class="year">2021</div><div class="title">Girl Power</div><div class="time">0:27</div></div>
+<div class="entry"><div class="artist">Mimi Fox</div><div class="album">Perpetually Hip</div><div class="year">2006</div><div class="title">Perpetually Hip</div><div class="time">9:25</div></div>
+<div class="entry"><div class="artist">Emily Remler</div><div class="album">East To Wes</div><div class="year">1988</div><div class="title">Blues For Herb</div><div class="time">6:23</div></div>
+<div class="entry"><div class="artist">Monnette Sudler</div><div class="album">Brighter Days for You</div><div class="year">1978</div><div class="title">Brighter Days for You</div><div class="time">6:50</div></div>
+
+<div class="entry xx ss"><div class="artist">Six String Mark</div><div class="album">Set 1</div><div class="year">2021</div><div class="title">Set</div><div class="time">0:27</div></div>
+<div class="entry"><div class="artist">Tommy Crook</div><div class="album">World of Fingerstyle Jazz Guitar</div><div class="year">2003</div><div class="title">Lullaby of Birdland</div><div class="time">3:41</div></div>
+<div class="entry"><div class="artist">Al Di Meola</div><div class="album">Land Of The Midnight Sun</div><div class="year">1976</div><div class="title">The Wizard</div><div class="time">6:46</div></div>
+<div class="entry"><div class="artist">Rob McConnell, Ed Bickert, Neil Swainson</div><div class="album">Trio Sketches</div><div class="year">1994</div><div class="title">Long Ago And Far Away</div><div class="time">4:31</div></div>
+<div class="entry"><div class="artist">Grant Green</div><div class="album">The Complete Quartets</div><div class="year">1997</div><div class="title">What Is This Thing Called Love</div><div class="time">5:50</div></div>
+
+
+<div class="entry part"><div class="part_name">Part 2 <a href="#" onclick="mc_monitor(7); return false;"><img src="play_small.png"/></a></div></div>
+
+<div class="entry xx ss"><div class="artist">Six String Mark</div><div class="album">Set 1</div><div class="year">2021</div><div class="title">Set</div><div class="time">0:27</div></div>
+<div class="entry"><div class="artist">Lorne Lofsky</div><div class="album">Bill, Please</div><div class="year">1994</div><div class="title">317 East 32nd</div><div class="time">6:41</div></div>
+<div class="entry"><div class="artist">Bill Frisell</div><div class="album">Guitar in the Space Age</div><div class="year">2014</div><div class="title">Tired of Waiting for You</div><div class="time">6:02</div></div>
+<div class="entry"><div class="artist">Martin Taylor</div><div class="album">Portraits</div><div class="year">1996</div><div class="title">Ol' Man River (Solo)</div><div class="time">3:52</div></div>
+
+<div class="entry xx ss"><div class="artist">Six String Mark</div><div class="album">Jazz Guitar Showcase Show 03</div><div class="year">2021</div><div class="title">Baden Powell Twin-Spin</div><div class="time">0:50</div></div>
+<div class="entry"><div class="artist">Baden Powell</div><div class="album">Solitude on guitar</div><div class="year">1973</div><div class="title">Bassamba</div><div class="time">4:39</div></div>
+<div class="entry"><div class="artist">Baden Powell</div><div class="album">Live At The Rio Jazz Club</div><div class="year">1990</div><div class="title">Samba Do Avião</div><div class="time">3:56</div></div>
+
+<div class="entry xx ss"><div class="artist">Six String Mark</div><div class="album">Jazz Guitar Showcase Show 03</div><div class="year">2021</div><div class="title">Jazz Beatle Mania</div><div class="time">0:22</div></div>
+<div class="entry"><div class="artist">Ron Eschete</div><div class="album">The Beatles: An Instrumental Jazz Tribute</div><div class="year">2000</div><div class="title">Ticket to Ride</div><div class="time">5:00</div></div>
+<div class="entry"><div class="artist">Bangor Flying Circus</div><div class="album">Bangor Flying Circus (new rip)</div><div class="year">1969</div><div class="title">Norwegian Wood (This Bird Has Flown)</div><div class="time">6:11</div></div>
+<div class="entry xx"><div class="artist">1968 WIFE Aircheck with Jay Reynolds</div><div class="album">1968 WIFE Aircheck</div><div class="year">1968</div><div class="title">1968 (WIFE) EYE mag yellow submarine poster ad</div><div class="time">0:11</div></div>
+<div class="entry"><div class="artist">George Benson</div><div class="album">The Other Side of Abbey Road</div><div class="year">1969</div><div class="title">Octopus's Garden</div><div class="time">1:21</div></div>
+<div class="entry"><div class="artist">Jeff Beck</div><div class="album">Blow By Blow</div><div class="year">1975</div><div class="title">She's A Woman</div><div class="time">4:31</div></div>
+
+<div class="entry xx ss"><div class="artist">Six String Mark</div><div class="album">Jazz Guitar Showcase Show 03</div><div class="year">2021</div><div class="title">Look What They've Done to My Song</div><div class="time">0:45</div></div>
+<div class="entry"><div class="artist">Carmen Leggio,John Bunch,The Cal Collins Quintet</div><div class="album">Ohio Boss Guitar</div><div class="year">1977</div><div class="title">For All We Know</div><div class="time">5:05</div></div>
+<div class="entry"><div class="artist">Stephane Grappelli</div><div class="album">So Easy To Remember</div><div class="year">1992</div><div class="title">For All We Know</div><div class="time">5:20</div></div>
+
+<div class="entry xx ss"><div class="artist">Six String Mark</div><div class="album">Set 1</div><div class="year">2021</div><div class="title">Set</div><div class="time">0:27</div></div>
+<div class="entry"><div class="artist">Allan Holdsworth</div><div class="album">Live in Japan 1984</div><div class="year">1984</div><div class="title">Home (Live)</div><div class="time">5:42</div></div>
+<div class="entry"><div class="artist">Allan Reuss</div><div class="album">A History of Jazz Guitar</div><div class="year">1946</div><div class="title">The Moon Is Low</div><div class="time">3:17</div></div>
+<div class="entry"><div class="artist">Julian Coryell</div><div class="album">Without You</div><div class="year">2011</div><div class="title">Blue Dogs Pedestrian Sequester</div><div class="time">6:14</div></div>
+<div class="entry"><div class="artist">Denny Wright & The Hot Club Of London</div><div class="album">Jazz Violin</div><div class="year">2007</div><div class="title">French Connection</div><div class="time">2:44</div></div>
+<div class="entry"><div class="artist">Oscar Castro-Neves</div><div class="album">Playful Heart</div><div class="year">2003</div><div class="title">Watch What Happens</div><div class="time">3:48</div></div>
+
+<div class="entry xx ss"><div class="artist">Six String Mark</div><div class="album">Jazz Guitar Showcase Show 03</div><div class="year">2021</div><div class="title">Wes Montgomery Twin Spin</div><div class="time">0:32</div></div>
+<div class="entry"><div class="artist">Wes Montgomery</div><div class="album">Wes Montgomery</div><div class="year">1965</div><div class="title">Impressions</div><div class="time">5:03</div></div>
+<div class="entry"><div class="artist">Wes Montgomery</div><div class="album">A Day in the Life</div><div class="year">1967</div><div class="title">California Nights</div><div class="time">2:32</div></div>
+
+
+<div class="entry part"><div class="part_name">Part 3 <a href="#" onclick="mc_monitor(8); return false;"><img src="play_small.png"/></a></div></div>
+
+<div class="entry xx ss"><div class="artist">Six String Mark</div><div class="album">Set 1</div><div class="year">2021</div><div class="title">Set</div><div class="time">0:27</div></div>
+<div class="entry"><div class="artist">Sonny Greenwich</div><div class="album">Fragments of a Memory</div><div class="year">2002</div><div class="title">The Entertainer</div><div class="time">6:03</div></div>
+<div class="entry"><div class="artist">Vic Juris</div><div class="album">Moonscape</div><div class="year">1997</div><div class="title">Critters</div><div class="time">7:47</div></div>
+<div class="entry"><div class="artist">Six String Mark</div><div class="album">Jazz Guitar Showcase Show 03</div><div class="year">2021</div><div class="title">JG3-3-02 Midcap 1</div><div class="time">0:32</div></div>
+<div class="entry"><div class="artist">The James Carter Organ Trio</div><div class="album">At The Crossroads</div><div class="year">2011</div><div class="title">Aged Pain</div><div class="time">5:26</div></div>
+<div class="entry xx"><div class="artist">WKLO 1961 Aircheck with Bob Lyons</div><div class="album">WKLO 1961 Aircheck</div><div class="year">1961</div><div class="title">1961 (WKLO) that's what i call a swingin beer</div><div class="time">0:10</div></div>
+<div class="entry"><div class="artist">Clarence "Gatemouth" Brown</div><div class="album">No Looking Back</div><div class="year">1992</div><div class="title">C Jam Blues</div><div class="time">3:12</div></div>
+
+<div class="entry xx ss"><div class="artist">Six String Mark</div><div class="album">Jazz Guitar Showcase Show 03</div><div class="year">2021</div><div class="title">Moonlight in Vermont Side 2</div><div class="time">0:38</div></div>
+<div class="entry"><div class="artist">Smith, Johnny & Quintet</div><div class="album">Johnny Smith Quintet Featuring Stan Getz</div><div class="year">1952</div><div class="title">Stars Fell On Alabama</div><div class="time">3:11</div></div>
+<div class="entry"><div class="artist">Smith, Johnny & Quintet</div><div class="album">Johnny Smith Quintet Featuring Stan Getz</div><div class="year">1952</div><div class="title">Where Or When</div><div class="time">2:29</div></div>
+<div class="entry"><div class="artist">Smith, Johnny & Quintet</div><div class="album">Johnny Smith Quintet Featuring Stan Getz</div><div class="year">1952</div><div class="title">I'll Be Around</div><div class="time">2:47</div></div>
+<div class="entry"><div class="artist">Smith, Johnny & Quintet</div><div class="album">Johnny Smith Quintet Featuring Stan Getz</div><div class="year">1952</div><div class="title">Cherokee</div><div class="time">2:50</div></div>
+<div class="entry"><div class="artist">Smith, Johnny & Quintet</div><div class="album">Johnny Smith Quintet Featuring Stan Getz</div><div class="year">1952</div><div class="title">Yesterdays</div><div class="time">2:54</div></div>
+
+<div class="entry xx ss"><div class="artist">Six String Mark</div><div class="album">Set 1</div><div class="year">2021</div><div class="title">Set</div><div class="time">0:27</div></div>
+<div class="entry"><div class="artist">Smith, Johnny & Quintet</div><div class="album">Johnny Smith Quintet Featuring Stan Getz</div><div class="year">1952</div><div class="title">Vilia</div><div class="time">2:43</div></div>
+<div class="entry"><div class="artist">Savoy Brown</div><div class="album">Raw Sienna</div><div class="year">1970</div><div class="title">Is That So</div><div class="time">7:44</div></div>
+<div class="entry"><div class="artist">Dan Papaila</div><div class="album">Positively!</div><div class="year">2008</div><div class="title">Loverman</div><div class="time">5:06</div></div>
+<div class="entry"><div class="artist">Six String Mark</div><div class="album">Jazz Guitar Showcase Show 03</div><div class="year">2021</div><div class="title">JG3-3-05 Midcap 2</div><div class="time">0:15</div></div>
+<div class="entry"><div class="artist">Ulf Wakenius</div><div class="album">Now Jazz & Chill</div><div class="year">2003</div><div class="title">Forever You</div><div class="time">4:06</div></div>
+<div class="entry"><div class="artist">Sonny Rollins</div><div class="album">The Bridge</div><div class="year">1962</div><div class="title">The Bridge</div><div class="time">5:59</div></div>
+<div class="entry"><div class="artist">Attila Zoller</div><div class="album">Road Song</div><div class="year">1962</div><div class="title">Night Bounce</div><div class="time">4:10</div></div>
+<div class="entry"><div class="artist">Chuck Loeb</div><div class="album">Guitar Maters Vol. 3 & 4: Les Paul Dedication</div><div class="year">2010</div><div class="title">Swift Kick</div><div class="time">4:20</div></div>
+<div class="entry"><div class="artist">Ted Dunbar</div><div class="album">Gentle Time Alone</div><div class="year">1992</div><div class="title">D Flat Rhythm Song</div><div class="time">5:28</div></div>
+<div class="entry"><div class="artist">Tal Farlow</div><div class="album">The Swinging Guitar Of Tal Farlow [Bonus Tracks]</div><div class="year">1957</div><div class="title">Yardbird Suite</div><div class="time">5:19</div></div>
+<div class="entry xx ss"><div class="artist">Six String Mark</div><div class="album">Jazz Guitar Showcase Show 03</div><div class="year">2021</div><div class="title">Sign-Off</div><div class="time">1:10</div></div>
+
+
+</div>
+</div>
+
+
+
+
+
+				</li>
+
+
+
+
+				</ul>
+
+		</div><!-- details -->
+		</div><!-- wrapper -->
+	</div><!-- #container -->
+        <!-- player code -->
+
+        <!-- PLAYLIST LIST -->
+        <div id="playlist_list" style="display:none;">
+
+             <!-- local playlist -->
+             <ul id='playlist1'>
+                 <li class= 'playlistItem' data-type='local' data-mp3='http://www.mckenzieduo.com/sounds/vinyl-vortex-oldies-show-primer.mp3'
+                 ><a class='playlistNonSelected' href='#'>Jazz Guitar Showcase</a></li>
+             </ul>
+
+
+
+        </div>
+
+</body>
+<script>
+var supportsM3u = false;
+var myAudio = document.createElement('audio');
+if (myAudio.canPlayType('audio/mpegurl') !== ""){supportsM3u = true;}
+if( supportsM3u ) {
+//	$('.m3ulink').toggle();
+}
+function mc_monitor(xx) {
+	console.log('boo');
+	api_inputAudio(hap_players[0],mct[xx]);
+	console.log('who');
+}
+</script>
+</html>
